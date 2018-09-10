@@ -25,6 +25,9 @@ packagelist=(
      "vim"
      "python3-pip"
      "python-pip"
+#powerline設定
+     "golang"
+     "fonts-powerline"
 
 #グラフ描画
     "gnuplot"
@@ -40,5 +43,14 @@ done
 
 sudo apt update -y
 sudo apt upgrade -y
+
+#============================================================
+#powerline設定
+#============================================================
+sudo mkdir -p ~/go; echo "export GOPATH=$HOME/go" >> ~/.zshrc
+echo "export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin" >> ~/.zshrc
+source ~/.zshrc
+go get -u github.com/justjanne/powerline-go
+#============================================================
 
 ./link.sh
