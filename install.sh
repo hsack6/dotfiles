@@ -11,6 +11,8 @@ packagelist=(
      "gnome-terminal" 
      "tmux"
      "zsh"
+     "curl"
+     "wget"
      #"terminator" 
 
 #開発環境
@@ -27,8 +29,9 @@ packagelist=(
 #グラフ描画
     "gnuplot"
     "gnuplot-x11"
-
 )
+
+sudo apt update -y
 
 echo "start apt install apps..."
 for list in ${packagelist[@]}; do
