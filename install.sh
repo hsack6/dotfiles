@@ -47,10 +47,11 @@ sudo apt upgrade -y
 #============================================================
 #powerline設定
 #============================================================
-sudo mkdir -p ~/go; echo "export GOPATH=$HOME/go" >> ~/.zshrc
-echo "export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin" >> ~/.zshrc
+sudo mkdir -p ~/go
+sudo echo "export GOPATH=$HOME/go" >> ~/.zshrc
+sudo echo "export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin" >> ~/.zshrc
 source ~/.zshrc
-go get -u github.com/justjanne/powerline-go
+sudo go get -u github.com/justjanne/powerline-go
 #============================================================
 
 ./link.sh
