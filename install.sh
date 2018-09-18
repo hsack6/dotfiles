@@ -38,7 +38,7 @@ sudo apt update -y
 
 echo "start apt install apps..."
 for list in ${packagelist[@]}; do
-    sudo apt install -y ${list}
+    sudo apt-get install -y ${list}
 done
 
 sudo apt update -y
@@ -56,5 +56,5 @@ if [ -n "$is_desktop" ]; then
     sudo go get -u github.com/justjanne/powerline-go
 fi
 #============================================================
-
+cd $(dirname $0) && pwd
 ./link.sh
