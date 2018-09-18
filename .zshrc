@@ -169,32 +169,34 @@ esac
 
 # vim:set ft=zsh:
 
-
 #=================================================
 #powerline-go
 #=================================================
-[[ -d ~/.rbenv  ]] && \
-  export PATH=${HOME}/.rbenv/bin:${PATH} && \
-    eval "$(rbenv init -)"
+is_desktop=`dpkg -l ubuntu-desktop 2> /dev/null`
+if [ -n "$is_desktop" ]; then
+    [[ -d ~/.rbenv  ]] && \
+      export PATH=${HOME}/.rbenv/bin:${PATH} && \
+        eval "$(rbenv init -)"
 
 
-export PATH=/usr/lib/go-1.10/bin:$PATH
+    export PATH=/usr/lib/go-1.10/bin:$PATH
 
-function powerline_precmd() {
-    PS1="$(~/go/bin/powerline-go -error $? -newline -shell zsh)"
-}
+    function powerline_precmd() {
+        PS1="$(~/go/bin/powerline-go -error $? -newline -shell zsh)"
+    }
 
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
+    function install_powerline_precmd() {
+      for s in "${precmd_functions[@]}"; do
+        if [ "$s" = "powerline_precmd" ]; then
+          return
+        fi
+      done
+      precmd_functions+=(powerline_precmd)
+    }
+
+    if [ "$TERM" != "linux" ]; then
+        install_powerline_precmd
     fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
 fi
 #=================================================
 
@@ -224,4 +226,5 @@ fi
 #上のものの方が高機能っぽいが、上手く動かなかった
 #https://saitodev.co/article/zsh%E3%81%AE%E8%B5%B7%E5%8B%95%E3%81%A8%E5%90%8C%E6%99%82%E3%81%ABtmux%E3%82%82%E8%B5%B7%E5%8B%95%E3%81%97%E3%81%A6%E3%81%BB%E3%81%97%E3%81%84
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
-#=================================================
+#=================================================export GOPATH=/home/yusuke/go
+export PATH=/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/opt/apache-drill-1.12.0/bin:/usr/lib/hbase-1.3.1/bin:/opt/zookeeper-3.4.10/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/yusuke/go/bin:/usr/local/go/bin
