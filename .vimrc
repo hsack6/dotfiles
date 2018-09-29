@@ -66,3 +66,7 @@ set history=10000
 "ビープ音すべてを無効にする
 set visualbell t_vb=
 set noerrorbells "エラーメッセージの表示時にビープを鳴らさない
+
+"自分でいじった分
+syntax enable
+colorscheme molokai

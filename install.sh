@@ -56,5 +56,5 @@ if [ -n "$is_desktop" ]; then
     sudo go get -u github.com/justjanne/powerline-go
 fi
 #============================================================
-cd $(dirname $0) && pwd
+cd $(dirname $0)
 ./link.sh
