@@ -182,7 +182,7 @@ if [ -n "$is_desktop" ]; then
     export PATH=/usr/lib/go-1.10/bin:$PATH
 
     function powerline_precmd() {
-        PS1="$(~/go/bin/powerline-go -error $? -newline -shell zsh)"
+        PS1="$(~/.go/bin/powerline-go -error $? -newline -shell zsh)"
     }
 
     function install_powerline_precmd() {
@@ -228,3 +228,4 @@ fi
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
 #=================================================export GOPATH=/home/yusuke/go
 export PATH=/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/opt/apache-drill-1.12.0/bin:/usr/lib/hbase-1.3.1/bin:/opt/zookeeper-3.4.10/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/yusuke/go/bin:/usr/local/go/bin
+export PATH=$PATH:/Users/yusuke/.nodebrew/current/bin
