@@ -13,6 +13,7 @@ packagelist=(
      "zsh"
      "curl"
      "wget"
+     "xsel"
      #"terminator" 
 
 #開発環境
@@ -47,14 +48,11 @@ sudo apt upgrade -y
 #============================================================
 #powerline設定
 #============================================================
-is_desktop=`dpkg -l ubuntu-desktop 2> /dev/null`
-if [ -n "$is_desktop" ]; then
-    sudo mkdir -p ~/go
-    sudo echo "export GOPATH=$HOME/go" >> ~/.zshrc
-    sudo echo "export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin" >> ~/.zshrc
-    source ~/.zshrc
-    sudo go get -u github.com/justjanne/powerline-go
-fi
+sudo mkdir -p ~/go
+sudo echo "export GOPATH=$HOME/go" >> ~/.zshrc
+sudo echo "export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin" >> ~/.zshrc
+source ~/.zshrc
+sudo go get -u github.com/justjanne/powerline-go
 #============================================================
-cd $(dirname $0) && pwd
+cd $(dirname $0)
 ./link.sh

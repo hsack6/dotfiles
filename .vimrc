@@ -66,3 +66,10 @@ set history=10000
 "ビープ音すべてを無効にする
 set visualbell t_vb=
 set noerrorbells "エラーメッセージの表示時にビープを鳴らさない
+
+"自分でいじった分
+syntax enable
+colorscheme molokai
+
+" ESCでIMEをoffにする
+inoremap <ESC> <ESC>:set iminsert=0<CR>  " ESCでIMEを確実にOFF
