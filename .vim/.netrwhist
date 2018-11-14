@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/yusuke/Dropbox/end2end/source/_includes'
+let g:netrw_dirhist_2='/home/yusuke/dotfiles/.vim'
 let g:netrw_dirhist_1='/home/yusuke/Document/jupyter'
+

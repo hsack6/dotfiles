@@ -70,3 +70,6 @@ set noerrorbells "エラーメッセージの表示時にビープを鳴らさ�
 "自分でいじった分
 syntax enable
 colorscheme molokai
+
+" ESCでIMEをoffにする
+inoremap <ESC> <ESC>:set iminsert=0<CR>  " ESCでIMEを確実にOFF
