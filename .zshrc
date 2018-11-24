@@ -229,7 +229,6 @@ esac
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
 #=================================================export GOPATH=$HOME/go
 
-export PATH=/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/opt/apache-drill-1.12.0/bin:/usr/lib/hbase-1.3.1/bin:/opt/zookeeper-3.4.10/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:$HOME/go/bin:/usr/local/go/bin:$HOME/ghkw_linux_amd64
-export PATH=$PATH:$HOME/.nodebrew/current/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin
+export PATH=$PATH:/home/onimem/anaconda3/bin
