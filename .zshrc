@@ -227,8 +227,9 @@ esac
 #上のものの方が高機能っぽいが、上手く動かなかった
 #https://saitodev.co/article/zsh%E3%81%AE%E8%B5%B7%E5%8B%95%E3%81%A8%E5%90%8C%E6%99%82%E3%81%ABtmux%E3%82%82%E8%B5%B7%E5%8B%95%E3%81%97%E3%81%A6%E3%81%BB%E3%81%97%E3%81%84
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
-#=================================================export GOPATH=/home/yusuke/go
+#=================================================export GOPATH=$HOME/go
 
-export PATH=/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/usr/lib/go-1.10/bin:/home/yusuke/.rbenv/shims:/home/yusuke/.rbenv/bin:/opt/apache-drill-1.12.0/bin:/usr/lib/hbase-1.3.1/bin:/opt/zookeeper-3.4.10/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/yusuke/go/bin:/usr/local/go/bin:/home/yusuke/ghkw_linux_amd64
-export PATH=$PATH:/Users/yusuke/.nodebrew/current/bin
-
+export PATH=/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/opt/apache-drill-1.12.0/bin:/usr/lib/hbase-1.3.1/bin:/opt/zookeeper-3.4.10/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:$HOME/go/bin:/usr/local/go/bin:$HOME/ghkw_linux_amd64
+export PATH=$PATH:$HOME/.nodebrew/current/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin
