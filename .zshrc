@@ -233,6 +233,3 @@ export PATH=/usr/lib/go-1.10/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/lib/go
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin:/usr/local/go/bin
-
-set-option -g default-shell "${SHELL}"
-set -g default-command "${SHELL}"
