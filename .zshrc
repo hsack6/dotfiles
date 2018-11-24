@@ -184,7 +184,7 @@ esac
     export PATH=/usr/lib/go-1.10/bin:$PATH
 
     function powerline_precmd() {
-        PS1="$(~/.go/bin/powerline-go -error $? -newline -shell zsh)"
+        PS1="$(~/go/bin/powerline-go -error $? -newline -shell zsh)"
     }
 
     function install_powerline_precmd() {
