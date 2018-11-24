@@ -49,9 +49,9 @@ sudo apt upgrade -y
 #powerline設定
 #============================================================
 sudo mkdir -p ~/go
+cd $(dirname $0)
+./link.sh
 source ~/.zshrc
 sudo go get -u github.com/justjanne/powerline-go
 #============================================================
-cd $(dirname $0)
-./link.sh
 chsh -s `which zsh` $USER #default shellをzshに変更
